@@ -1,10 +1,18 @@
-/* Header styles */
-.header {
-  background-color: #000000ec;
-  padding: 10px 0;
-  width: 100%; /* Definindo a largura do cabeçalho como 100% da largura disponível */
+body {
+  padding-top: 70px; /* Ajuste conforme a altura do cabeçalho */
 }
 
+/* Header styles */
+.header {
+  position: fixed; /* Define o cabeçalho como fixo */
+  top: 0; /* Posiciona o cabeçalho no topo da página */
+  left: 0; /* Posiciona o cabeçalho no canto superior esquerdo */
+  width: 100%; /* Define a largura do cabeçalho como 100% da largura da janela do navegador */
+  background-color: #000000ec;
+  padding: 10px 0;
+}
+
+/* Estilos de conteúdo */
 .header-content {
   display: flex;
   align-items: center;
@@ -143,4 +151,20 @@ button[type="submit"]:hover {
 
 .form-group-flex .form-group:last-child {
   margin-right: 0;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Isso centralizará a caixa verticalmente */
+}
+
+.about-box {
+  background-color: #f4f4f4; /* Cor de fundo da caixa */
+  border: 1px solid #ddd; /* Borda da caixa */
+  padding: 20px; /* Espaçamento interno */
+  width: 80%; /* Largura da caixa */
+  max-width: 600px; /* Largura máxima da caixa */
+  text-align: center; /* Centralizar o texto */
 }
