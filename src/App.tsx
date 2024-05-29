@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -7,7 +8,7 @@ import Contact from './components/Contact';
 import './styles.css';
 
 const App: React.FC = () => {
-  const [activeTab, setActiveTab] = React.useState('Home');
+  const [activeTab, setActiveTab] = useState('Home');
 
   const renderContent = () => {
     switch (activeTab) {
@@ -25,9 +26,13 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="app-container"> {}
+    <div className="app-container">
       <Header setActiveTab={setActiveTab} />
-      {renderContent()}
+      <TransitionGroup>
+        <CSSTransition key={activeTab} classNames="fade" timeout={300}>
+          {renderContent()}
+        </CSSTransition>
+      </TransitionGroup>
     </div>
   );
 };

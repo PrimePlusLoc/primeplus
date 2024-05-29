@@ -3,7 +3,7 @@ import React from 'react';
 const Home: React.FC = () => {
   return (
     <div>
-      <h1>Bem-vindo à Locadora de Veículos</h1>
+      <h1>Bem-vindo à Prime Plus Locadora de veículos</h1>
       <p>Aqui você encontra os melhores carros para alugar.</p>
     </div>
   );
