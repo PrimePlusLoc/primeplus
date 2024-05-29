@@ -1,0 +1,23 @@
+header {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Torna as abas horizontais */
+}
+
+nav ul li {
+  margin-right: 20px;
+  cursor: pointer;
+  color: white; /* Cor do texto */
+  font-weight: bold; /* Texto em negrito */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+nav ul li:hover {
+  text-decoration: underline; /* Sublinha o texto quando hover */
+}
