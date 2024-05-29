@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ setActiveTab }) => {
             <li className="menu-item" onClick={() => setActiveTab('Home')}>Home</li>
             <li className="menu-item" onClick={() => setActiveTab('About')}>Sobre Nós</li>
             <li className="menu-item" onClick={() => setActiveTab('Careers')}>Trabalhe Conosco</li>
-            <li className="menu-item" onClick={() => setActiveTab('Contact')}>Nos Contate</li>
+            <li className="menu-item" onClick={() => setActiveTab('Contact')}>Contato</li>
           </ul>
         </nav>
       </div>
