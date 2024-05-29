@@ -144,3 +144,17 @@ button[type="submit"]:hover {
 .form-group-flex .form-group:last-child {
   margin-right: 0;
 }
+
+.selected {
+  font-weight: bold;
+  color: rgb(250, 234, 14); /* Cor que você deseja para o item selecionado */
+}
+
+.menu-item.selected::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px; /* Altura da linha decorativa */
+  background-color: #ffffff; /* Cor da linha decorativa */
+  margin-top: 3px; /* Distância entre a linha e o texto do item do menu */
+}

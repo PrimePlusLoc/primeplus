@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
         <h2>Contato</h2>
         <p>Utilize esse formulário para as tirar suas dúvidas, deixar sugestões e/ou fazer alguma reclamação.</p>
         <p>Nossa equipe irá analisar e assim que possível, entraremos em contato!</p>
-        <form>
+       <form>
   <div className="form-group">
     <label htmlFor="name">Seu Nome</label>
     <input type="text" id="name" name="name" />
