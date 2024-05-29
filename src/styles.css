@@ -18,6 +18,17 @@ nav ul li {
   text-transform: uppercase; /* Transforma o texto em maiúsculas */
 }
 
-nav ul li:hover {
-  text-decoration: underline; /* Sublinha o texto quando hover */
+.menu-container {
+  display: flex;
+  justify-content: flex-end; /* Alinha os itens à direita */
+}
+
+.menu-item {
+  margin-left: 20px; /* Espaçamento entre os itens */
+}
+
+.logo {
+  width: 100px; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-right: auto; /* Empurra a logo para a esquerda */
 }

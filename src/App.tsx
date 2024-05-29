@@ -1,9 +1,10 @@
 import React from 'react';
-import Header from './components/Header'
+import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
 import Careers from './components/Careers';
 import Contact from './components/Contact';
+import './styles.css';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = React.useState('Home');
@@ -24,7 +25,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="app-container"> {}
       <Header setActiveTab={setActiveTab} />
       {renderContent()}
     </div>
