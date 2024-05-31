@@ -2,7 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import logo from '../assets/logo.png';
+import image2 from '../assets/primeplus2020-novoscomil.png';
+import './Slide.css';  // Import the CSS file
 
 const Slide: React.FC = () => {
   const settings = {
@@ -16,17 +17,16 @@ const Slide: React.FC = () => {
   };
 
   return (
-    <Slider {...settings}>
-      <div>
-        <img src={logo} alt="Slide 1" />
-      </div>
-      <div>
-        <img src={logo} alt="Slide 2" />
-      </div>
-      <div>
-        <img src={logo} alt="Slide 3" />
-      </div>
-    </Slider>
+    <div className="slide-container">
+      <Slider {...settings}>
+        <div className="slide-image-container">
+          <img src={image2} alt="Slide 2" className="slide-image" />
+        </div>
+        <div className="slide-image-container">
+          <img src={image2} alt="Slide 2" className="slide-image" />
+        </div>
+      </Slider>
+    </div>
   );
 };
 
