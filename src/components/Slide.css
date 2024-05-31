@@ -10,11 +10,12 @@
 .slide-image-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%;
+  align-items: flex-start; /* Alterado para flex-start */
+  height: 100vh;
 }
 
 .slide-image {
-  max-width: 100%;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Para manter a proporção da imagem */
 }

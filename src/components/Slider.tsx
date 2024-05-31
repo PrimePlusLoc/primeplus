@@ -3,7 +3,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import image2 from '../assets/primeplus2020-novoscomil.png';
-import './Slide.css';  // Import the CSS file
+import image3 from '../assets/frota.jpeg';
+import './Slide.css'; 
 
 const Slide: React.FC = () => {
   const settings = {
@@ -23,7 +24,7 @@ const Slide: React.FC = () => {
           <img src={image2} alt="Slide 2" className="slide-image" />
         </div>
         <div className="slide-image-container">
-          <img src={image2} alt="Slide 2" className="slide-image" />
+          <img src={image3} alt="Slide 2" className="slide-image" />
         </div>
       </Slider>
     </div>
