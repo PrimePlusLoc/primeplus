@@ -83,13 +83,23 @@ nav ul li {
 }
 
 .form-group input,
-.form-group textarea,
 .form-group select {
   width: 100%;
   padding: 8px; /* Reduzindo o preenchimento dos campos de entrada */
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px; /* Reduzindo o tamanho da fonte dos campos de entrada */
+}
+
+.form-group textarea {
+  width: 100%;
+  min-height: 100px; /* Altura mínima do campo de mensagem */
+  max-height: 200px; /* Altura máxima do campo de mensagem */
+  resize: vertical; /* Permitir redimensionamento vertical */
+  padding: 8px; /* Reduzindo o preenchimento do campo de mensagem */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px; /* Reduzindo o tamanho da fonte do campo de mensagem */
 }
 
 button[type="submit"] {
@@ -168,4 +178,3 @@ button[type="submit"]:hover {
   max-width: 600px; /* Largura máxima da caixa */
   text-align: center; /* Centralizar o texto */
 }
-

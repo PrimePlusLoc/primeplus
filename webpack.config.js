@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -24,7 +25,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              outputPath: 'images', // Define o diretório de saída para as imagens
+              outputPath: 'images',
             },
           },
         ],
@@ -37,6 +38,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+    }),
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_RECAPTCHA_SITE_KEY': JSON.stringify(process.env.REACT_APP_RECAPTCHA_SITE_KEY),
     }),
   ],
   devServer: {
