@@ -178,3 +178,11 @@ button[type="submit"]:hover {
   max-width: 600px; /* Largura máxima da caixa */
   text-align: center; /* Centralizar o texto */
 }
+
+.menu-item.selected {
+  color: yellow;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
