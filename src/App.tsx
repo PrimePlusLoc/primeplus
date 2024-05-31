@@ -28,11 +28,14 @@ const App: React.FC = () => {
   return (
     <div className="app-container">
       <Header setActiveTab={setActiveTab} />
-      <TransitionGroup>
-        <CSSTransition key={activeTab} classNames="fade" timeout={300}>
-          {renderContent()}
-        </CSSTransition>
-      </TransitionGroup>
+      <div className="content" style={{ paddingTop: '70px' }}>
+        {/* Adicione o padding superior correspondente à altura do cabeçalho */}
+        <TransitionGroup>
+          <CSSTransition key={activeTab} classNames="fade" timeout={300}>
+            {renderContent()}
+          </CSSTransition>
+        </TransitionGroup>
+      </div>
     </div>
   );
 };
