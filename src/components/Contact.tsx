@@ -10,7 +10,6 @@ declare global {
 const Contact: React.FC = () => {
   useEffect(() => {
     const loadReCaptchaScript = () => {
-      // Verificar se estamos no navegador
       if (typeof window !== 'undefined') {
         const script = document.createElement('script');
         script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA_SITE_KEY}`;
@@ -45,9 +44,8 @@ const Contact: React.FC = () => {
 
         e.currentTarget.appendChild(recaptchaInput);
 
-        // Aqui você pode adicionar a lógica para enviar o formulário para o servidor, por exemplo, usando fetch ou axios
 
-        e.currentTarget.submit(); // Remova isso se você estiver usando fetch ou axios para enviar o formulário
+        e.currentTarget.submit();
       } catch (error) {
         console.error('Erro ao gerar o token do reCAPTCHA', error);
       }
