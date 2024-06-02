@@ -1,18 +1,24 @@
 body {
-  padding-top: 70px; /* Ajuste conforme a altura do cabeçalho */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  padding-top: 70px; /* Espaço para o cabeçalho fixo */
 }
 
 /* Header styles */
 .header {
-  position: fixed; /* Define o cabeçalho como fixo */
-  top: 0; /* Posiciona o cabeçalho no topo da página */
-  left: 0; /* Posiciona o cabeçalho no canto superior esquerdo */
-  width: 100%; /* Define a largura do cabeçalho como 100% da largura da janela do navegador */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #000000ec;
   padding: 10px 0;
+  z-index: 3; /* Garantir que o cabeçalho esteja acima do conteúdo */
 }
 
-/* Estilos de conteúdo */
 .header-content {
   display: flex;
   align-items: center;
@@ -47,8 +53,41 @@ nav ul li {
 }
 
 .logo {
-  max-width: 200px; /* Ajustando a largura máxima da logo para 200px */
+  max-width: 200px;
   height: auto;
+}
+
+.menu-item.selected {
+  color: yellow;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+/* Home styles */
+.home-container {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  min-height: 100vh; /* Para garantir que o container ocupe pelo menos a altura da tela */
+}
+
+.background-image {
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: inherit;
+  z-index: 20;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
 }
 
 /* Contact styles */
@@ -59,47 +98,47 @@ nav ul li {
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex; /* Exibir os elementos como flexíveis */
-  justify-content: space-between; /* Distribuir os elementos igualmente ao longo do contêiner */
+  display: flex;
+  justify-content: space-between;
 }
 
 .contact-form {
-  flex: 1; /* Distribuir o espaço disponível igualmente entre as duas divs */
+  flex: 1;
 }
 
 .contact-info {
-  flex: 1; /* Distribuir o espaço disponível igualmente entre as duas divs */
-  margin-left: 100px; /* Adicionando espaço à esquerda da parte de informações */
+  flex: 1;
+  margin-left: 100px;
 }
 
 .form-group {
-  margin-bottom: 10px; /* Reduzindo o espaçamento entre os grupos de formulário */
+  margin-bottom: 10px;
 }
 
 .form-group label {
-  margin-bottom: 3px; /* Reduzindo o espaçamento abaixo das etiquetas */
+  margin-bottom: 3px;
   font-weight: bold;
-  font-size: 14px; /* Reduzindo o tamanho da fonte das etiquetas */
+  font-size: 14px;
 }
 
 .form-group input,
 .form-group select {
   width: 100%;
-  padding: 8px; /* Reduzindo o preenchimento dos campos de entrada */
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 14px; /* Reduzindo o tamanho da fonte dos campos de entrada */
+  font-size: 14px;
 }
 
 .form-group textarea {
   width: 100%;
-  min-height: 100px; /* Altura mínima do campo de mensagem */
-  max-height: 200px; /* Altura máxima do campo de mensagem */
-  resize: vertical; /* Permitir redimensionamento vertical */
-  padding: 8px; /* Reduzindo o preenchimento do campo de mensagem */
+  min-height: 100px;
+  max-height: 200px;
+  resize: vertical;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 14px; /* Reduzindo o tamanho da fonte do campo de mensagem */
+  font-size: 14px;
 }
 
 button[type="submit"] {
@@ -121,13 +160,13 @@ button[type="submit"]:hover {
 }
 
 .contact-info h2 {
-  margin-bottom: 8px; /* Reduzindo o espaçamento abaixo do subtítulo */
-  font-size: 18px; /* Reduzindo o tamanho da fonte do subtítulo */
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
 .contact-info p {
-  margin: 3px 0; /* Reduzindo o espaçamento entre os parágrafos */
-  font-size: 14px; /* Reduzindo o tamanho da fonte dos parágrafos */
+  margin: 3px 0;
+  font-size: 14px;
 }
 
 /* Animation styles */
@@ -137,7 +176,7 @@ button[type="submit"]:hover {
 
 .fade-enter-active {
   opacity: 1;
-  transition: opacity 1000ms;
+  transition: opacity 300ms;
 }
 
 .fade-exit {
@@ -146,7 +185,7 @@ button[type="submit"]:hover {
 
 .fade-exit-active {
   opacity: 0;
-  transition: opacity 1ms;
+  transition: opacity 300ms;
 }
 
 .form-group-flex {
@@ -156,7 +195,7 @@ button[type="submit"]:hover {
 
 .form-group-flex .form-group {
   flex: 1;
-  margin-right: 70px; /* Ajuste o valor conforme necessário */
+  margin-right: 70px;
 }
 
 .form-group-flex .form-group:last-child {
@@ -167,22 +206,14 @@ button[type="submit"]:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Isso centralizará a caixa verticalmente */
+  height: 100vh;
 }
 
 .about-box {
-  background-color: #f4f4f4; /* Cor de fundo da caixa */
-  border: 1px solid #ddd; /* Borda da caixa */
-  padding: 20px; /* Espaçamento interno */
-  width: 80%; /* Largura da caixa */
-  max-width: 600px; /* Largura máxima da caixa */
-  text-align: center; /* Centralizar o texto */
-}
-
-.menu-item.selected {
-  color: yellow;
-}
-
-.menu-item:hover {
-  text-decoration: underline;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
 }

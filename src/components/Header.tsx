@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../styles.css';
-import logo from '../assets/logo.png';
+import '../styles.css'; // Import the global styles
+import logo from '../assets/logo.png'; // Adjust the path if necessary
 
 interface HeaderProps {
   setActiveTab: (tab: string) => void;
